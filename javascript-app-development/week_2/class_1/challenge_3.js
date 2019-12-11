@@ -83,6 +83,17 @@ const students = [
     // are failing. Write a function called getFailingStudents.
     // The function should take an array of students
     // and return a new array of students with failing GPAs
+    function getFailingStudents(students) {
+        let failingStudents = [];
+        
+        for(let i = 0; i < students.length; i++) {
+            if (students[i].gpa < 2.0) {
+                failingStudents.push(students[i]);
+            }
+        }
+
+        return failingStudents;
+    }
 
 // Part 3
     // The school would like to determine whether a student is taking a course
