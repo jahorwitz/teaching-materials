@@ -78,6 +78,24 @@ const students = [
     // The function should take an array of students and a day
     // and return a new array of the students impacted by the closure
 
+	//justin
+	let determineEffectedStudents = function(students, day) {
+		let studentsImpacted = [];
+		
+		for(let i=0; i<students.length; i++){
+			for(let j=0;j<students[i].currentClasses.length;j++){
+				if(students[i].currentClasses[j].meetingDays.includes(day)) {
+					studentsImpacted.push(students[i]);
+				}
+			}
+		}
+		
+		return studentsImpacted;
+	};
+	
+	let answer = determineEffectedStudents(students, "Friday");
+	console.log(answer);
+	
 // Part 2
     // The school needs to notify any students with a GPA below 2.0 that they
     // are failing. Write a function called getFailingStudents.
@@ -98,4 +116,3 @@ const students = [
 // Part 5
     // Read Parts 1 through 4. Write a series of commands and console logs to
     // test the above functions and prove that they are working as intended.
-
