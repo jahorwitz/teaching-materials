@@ -113,6 +113,16 @@ const students = [
     // Write a void function called unEnrollStudentFromClass.
     // The function should take in a student object and a class name as a string
 
+    function unenrollStudent(student, course) {
+        let courses = [];
+        for(let i = 0; i < student.currentClasses.length; i++) {
+            if(student.currentClasses[i].courseName !== course) {
+                courses.push(student.currentClasses[i]);
+            }
+        }
+        student.currentClasses = courses;
+    }
+
 // Part 5
     // Read Parts 1 through 4. Write a series of commands and console logs to
     // test the above functions and prove that they are working as intended.
