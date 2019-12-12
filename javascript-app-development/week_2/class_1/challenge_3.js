@@ -73,40 +73,11 @@ const students = [{
 // The function should take an array of students and a day
 // and return a new array of the students impacted by the closure
 
-	//justin
-	let determineEffectedStudents = function(students, day) {
-		let studentsImpacted = [];
-		
-		for(let i=0; i<students.length; i++){
-			for(let j=0;j<students[i].currentClasses.length;j++){
-				if(students[i].currentClasses[j].meetingDays.includes(day)) {
-					studentsImpacted.push(students[i]);
-				}
-			}
-		}
-		
-		return studentsImpacted;
-	};
-	
-	let answer = determineEffectedStudents(students, "Friday");
-	console.log(answer);
-	
 // Part 2
 // The school needs to notify any students with a GPA below 2.0 that they
 // are failing. Write a function called getFailingStudents.
 // The function should take an array of students
 // and return a new array of students with failing GPAs
-let failingStudents = [];
-
-function getFailingStudents(students) {
-  for (i = 0; i < students.length; i++) {
-    if (students[i].gpa < 2) {
-      failingStudents.push(students[i])
-    }
-  }
-}
-getFailingStudents(students)
-console.log(failingStudents);
 
 // Part 3
 // The school would like to determine whether a student is taking a course
@@ -118,16 +89,6 @@ console.log(failingStudents);
 // The school would like to unenroll a student from a class.
 // Write a void function called unEnrollStudentFromClass.
 // The function should take in a student object and a class name as a string
-
-    function unenrollStudent(student, course) {
-        let courses = [];
-        for(let i = 0; i < student.currentClasses.length; i++) {
-            if(student.currentClasses[i].courseName !== course) {
-                courses.push(student.currentClasses[i]);
-            }
-        }
-        student.currentClasses = courses;
-    }
 
 // Part 5
 
