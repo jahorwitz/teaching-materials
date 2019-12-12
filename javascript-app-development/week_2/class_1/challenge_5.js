@@ -1,13 +1,6 @@
-// Recursion
-        // What happens when a function calls itself?
-        // Let's fiddle around with recursion a little bit
-
-
-
-
-
-
-
-
-// Then...
-        // Write a function to find the N'th fibonacci number using recursion
+// Combinations
+        // Print all unique combinations (not permutations) of
+        // n elements of an array using recursion
+        // Example:
+        // array = [1, 2, 3, 4], n = 2
+        // => 12 13 14 23 24 34
