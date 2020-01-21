@@ -1,0 +1,17 @@
+Using this API: http://jsonplaceholder.typicode.com
+
+Render the results to the page in html elements.
+Hide the results from the previous actions
+Create buttons that do each of the tasks below:
+    1) Get all posts
+    2) Get post with id of 10
+    3) Get the comments from post with id of 12
+        note: comments are part of a different data model, you'll need to structure your endpoint to ask for all of the comments that belong to post #12
+    4) Get all the posts from user with id of 2
+    5) Create a new post and log the id generated for it by the server
+    6) Replace the post with id of 12 and render the responseJSON
+    7) Update the title of post with id of 12 and render responseJSON
+    8) Delete the post with id of 12 and render a success message
+    9) Display a list of posts.
+        When the user clicks on a post, display all the comments from that post
+        Display a link back to all posts
