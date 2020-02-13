@@ -7,15 +7,17 @@ class Board extends Component {
     super();
     this.state = {
         notes: [{
+            id: "12345",
             title: "Class Notes",
             body: "Always use constructors when extending another class"
         }]
     };
   }
 
-  addNote() {
+  addNote = () => {
     const notes = this.state.notes;
     notes.push({
+        id: Date.now(),
         title: "Class Notes",
         body: "Always use constructors when extending another class"
     });
@@ -24,14 +26,14 @@ class Board extends Component {
     });
   }
 
-// TODO: enable deleting notes
-//   deleteNote(note) {
-//     const notes = this.state.notes;
-//     //remove note from notes
-//     this.setState({
-//         notes
-//     });
-//   }
+  deleteNote(id) {
+    let notes = this.state.notes.filter((note) => {
+      return note.id !== id;
+    });
+    this.setState({
+        notes
+    });
+  }
 
   render() {
     return (
@@ -39,22 +41,16 @@ class Board extends Component {
         <div className="div-board">
           <div className="row">
               {this.state.notes.map((note, index) => {
-                  return <Note key={index} title={note.title} body={note.body}/>;
+                  return <Note key={index} id={note.id} title={note.title} body={note.body} deleteHander={this.deleteNote.bind(this)}/>;
               })}
           </div>
         </div>
         <div>
-          <button onClick={this.addNote.bind(this)} className="btn btn-success add-button">Add</button>
+          <button onClick={this.addNote} className="btn btn-success add-button">Add</button>
         </div>
       </div>
     );
   }
 }
-
-{/* <Note title="Class Notes" body="Always use constructors when extending another class"/>
-              <Note title="Cooking Notes" body="Use fresh ingredients"/>
-              <Note title="Driving Notes" body="Drive on the right side of the road"/>
-              <Note title="Schedule Notes" body="Do not be late"/> */}
-
 
 export default Board;

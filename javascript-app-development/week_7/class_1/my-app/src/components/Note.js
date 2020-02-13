@@ -42,6 +42,11 @@ class Note extends Component {
     });
   }
 
+  handleDelete(event) {
+    event.preventDefault();
+    this.props.deleteHander(this.props.id);
+  }
+
   render() {
     return (
       <div className="col-sm-6">
@@ -65,7 +70,7 @@ class Note extends Component {
                 <h5 className="card-title">{this.state.title}</h5>
                 <p>{this.state.body}</p>
                 <button onClick={this.enterEditMode.bind(this)} className="btn btn-info">Edit</button>
-                <button className="btn btn-danger">Delete</button>
+                <button onClick={this.handleDelete.bind(this)} className="btn btn-danger">Delete</button>
               </div>
             )}
           </div>
