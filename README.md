@@ -2,15 +2,13 @@
 
 ## Courses
 
-### Introduction to Web Design and Creation
-
-### Javascript Application Development
+- Javascript Application Development
 
 ## About the Instructor: Josh Horwitz
 
 ### Background
-- Current position: Software Developer, EBSCO Information Services
-- 4 years professional experience as a full stack developer
+- Current position: Senior Software Developer, EBSCO Information Services
+- 5 years professional experience as a full stack developer
 - Certified AWS Solutions Architect Associate
 
 ### Hobbies
@@ -21,5 +19,5 @@
 - Building computers and homelab servers
 
 ### Social Media
-- [Github Resume](https://github.com/jahorwitz/resume)
+- [Github](https://github.com/jahorwitz)
 - [LinkedIn](https://www.linkedin.com/in/horwitzjoshua/)
