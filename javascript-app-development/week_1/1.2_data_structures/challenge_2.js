@@ -1,6 +1,6 @@
 // Given the following object
 
-var course = {
+let course = {
 	name: 'JavaScript Applications',
 	awesome: true,
 	teachers: ['Assaf', 'Shane'],
