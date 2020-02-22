@@ -1,6 +1,5 @@
 // Prototypes
 
-
 // Create a `time` variable and set it to 0
 // Create a `gravity` variable and set it to 0.5
 // Extend the particle class from earlier with a prototype object.
