@@ -1,0 +1,23 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "a practice application",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive './lib/**/*test*.js'",
+    "start": "node index.js"
+  },
+  "author": "jahorwitz",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.24.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "sinon": "^9.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "lodash": "^4.17.15",
+    "mocha": "^7.1.1"
+  }
+}
