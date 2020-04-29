@@ -2,7 +2,8 @@
 
 ## Courses
 
-- Javascript Application Development
+- Web Design ([Lecture Slides](https://slides.com/joshuahorwitz-1/decks/web-design))
+- Javascript Application Development ([Lecture Slides](https://slides.com/joshuahorwitz-1/decks/javascript-app-development))
 
 ## About the Instructor: Josh Horwitz
 
