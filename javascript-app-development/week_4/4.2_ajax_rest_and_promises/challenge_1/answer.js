@@ -4,17 +4,17 @@ $.get('http://jsonplaceholder.typicode.com/posts', data => {
 });
 
 // 2) Get post with id of 10
-$.get('http://jsonplaceholder.typicode.com/post/10', data => {
+$.get('http://jsonplaceholder.typicode.com/posts/10', data => {
 	console.log(data);
 });
 
 // 3) Get the comments from post with id of 12
-$.get('http://jsonplaceholder.typicode.com/post/12/comments', data => {
+$.get('http://jsonplaceholder.typicode.com/posts/12/comments', data => {
 	console.log(data);
 });
 
 // 4) Get all the posts from user with id of 2
-$.get('http://jsonplaceholder.typicode.com/user/2/posts', data => {
+$.get('http://jsonplaceholder.typicode.com/users/2/posts', data => {
 	console.log(data);
 });
 

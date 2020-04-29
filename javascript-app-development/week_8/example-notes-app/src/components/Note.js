@@ -3,12 +3,10 @@ import '../css/Note.css';
 
 class Note extends React.Component {
 
-    constructor(props) {
+    constructor() {
         super();
         this.state = {
-            title: props.title,
             editTitle: "",
-            body: props.body,
             editBody: "",
             editMode: false
         }
@@ -30,15 +28,8 @@ class Note extends React.Component {
     }
 
     saveNote = () => {
-        this.setState({
-            title: this.state.editTitle,
-            body: this.state.editBody
-        });
-    }
-
-    handleDelete = (event) => {
-        event.preventDefault();
-        this.props.handleDelete(this.props.noteId);
+        this.props.onSaveNote(this.state.editTitle, this.state.editBody);
+        this.toggleEditMode();
     }
 
     render() {
@@ -52,19 +43,16 @@ class Note extends React.Component {
                                 <input type="text" name="title" placeholder="New Title" value={this.state.editTitle} onChange={(this.handleTitleChange)} />
                                 <h5 className="card-title">Body:</h5>
                                 <input type="text" name="body" placeholder="New Body" value={this.state.editBody} onChange={this.handleBodyChange} />
-                                <button className="btn btn-info" onClick={() => {
-                                    this.saveNote();
-                                    this.toggleEditMode();
-                                }}>Save</button>
+                                <button className="btn btn-info" onClick={this.saveNote}>Save</button>
                                 <button className="btn btn-danger">Cancel</button>
                             </div>
                         )}
                         {!this.state.editMode && (
                             <div>
-                                <h5 className="card-title">{this.state.title}</h5>
-                                <p>{this.state.body}</p>
+                                <h5 className="card-title">{this.props.title}</h5>
+                                <p>{this.props.body}</p>
                                 <button className="btn btn-info" onClick={this.toggleEditMode}>Edit</button>
-                                <button className="btn btn-danger" onClick={this.handleDelete}>Delete</button>
+                                <button className="btn btn-danger" onClick={this.props.onDeleteNote}>Delete</button>
                             </div>
                         )}
                     </div>

@@ -10,3 +10,4 @@ To complete these challenges, open the html file in your browser and make change
 
 ## 4.2
 
+To complete these challenges, open the html file in your browser and make changes to the accompanying JS file. You may need to make additional changes to the HTML file in challenge 2 to suit your needs.
